@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      h1 {
+        font-size: 40px;
+      }
+    </style>
+    <title>Funções JS</title>
+  </head>
+  <body>
+    <h1>Conteúdo Javascript</h1>
+  </body>
+
+  <script>
+    //Função não anonima
+    function alerta() {
+      window.alert('Alerta aqui!');
+    }
+    alerta();
+    //Função anonima
+    const soma = function (a, b) {
+      return a + b;
+    };
+
+    //Função Arrow (Arrow Function)
+    const sub = (a, b) => {
+      return a - b;
+    };
+    document.querySelector('h1').innerText = calculo(50, 30);
+    //Função callback
+    function calculo(numeroA, numeroB) {
+      return sub(numeroA, numeroB);
+      //return soma(numeroA, numeroB);
+    }
+    //Função IIFE (Você nunca viu)
+    const resultado = (function () {
+      let nome = 'Caio Cosenza';
+      return nome;
+    })();
+    window.alert(resultado);
+  </script>
+</html>
